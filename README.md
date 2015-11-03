@@ -25,26 +25,47 @@ app.on('foo', /\.json$/, function (fp, file) {
 app.emit('foo', 'package.json', {path: 'package.json'});
 ```
 
-Example using [base-methods](https://github.com/jonschlinkert/base-methods)
+Example using [base-methods](https://github.com/jonschlinkert/base-methods) and adding `match-event` in the constructor.
 
 ```js
 var Base = require('base-methods');
-var Emitter = require('component-emitter');
 
 // Create an app inheriting from Base
+// component-emitter is used in base-methods so
+// it's not needed here.
 function MyApp() {
   Base.call(this);
-
   // use match-event as a plugin
   this.use(matchEvent());
 }
 
 Base.extend(MyApp);
 
-// Mixin component-emitter methods onto MyApp.prototype
-Emitter(MyApp.prototype);
+var app = new MyApp();
+app.on('foo', /\.json$/, function (fp, file) {
+  console.log(arguments);
+});
+
+app.emit('foo', 'package.json', {path: 'package.json'});
+```
+
+Example using [base-methods](https://github.com/jonschlinkert/base-methods) and adding `match-event` to an instance of `MyApp`.
+
+```js
+var Base = require('base-methods');
+
+// Create an app inheriting from Base
+// component-emitter is used in base-methods so
+// it's not needed here.
+function MyApp() {
+  Base.call(this);
+}
+
+Base.extend(MyApp);
 
 var app = new MyApp();
+app.use(matchEvent());
+
 app.on('foo', /\.json$/, function (fp, file) {
   console.log(arguments);
 });
