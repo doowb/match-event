@@ -1,0 +1,28 @@
+{
+  "name": "match-event",
+  "description": "Extend an event emitter to use string and regex patterns to listen for matching events.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doowb/match-event",
+  "author": "Brian Woodward (https://github.com/doowb)",
+  "repository": "doowb/match-event",
+  "bugs": {
+    "url": "https://github.com/doowb/match-event/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": []
+}
