@@ -10,7 +10,7 @@ $ npm i match-event --save
 
 ## Usage
 
-Example using only the [component-emitter][] and a simple object.
+Example using only the [component-emitter](https://github.com/component/emitter) and a simple object.
 
 ```js
 var Emitter = require('component-emitter');
@@ -25,7 +25,7 @@ app.on('foo', /\.json$/, function (fp, file) {
 app.emit('foo', 'package.json', {path: 'package.json'});
 ```
 
-Example using [base-methods][]
+Example using [base-methods](https://github.com/jonschlinkert/base-methods)
 
 ```js
 var Base = require('base-methods');
