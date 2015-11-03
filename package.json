@@ -20,7 +20,20 @@
     "test": "mocha"
   },
   "devDependencies": {
+    "base-methods": "^0.4.0",
     "component-emitter": "^1.2.0",
     "mocha": "*"
+  },
+  "dependencies": {
+    "define-property": "^0.2.5"
+  },
+  "verb": {
+    "related": {
+      "list": [
+        "base-methods",
+        "component-emitter",
+        "emitter-only"
+      ]
+    }
   }
 }
