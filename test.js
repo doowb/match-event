@@ -174,7 +174,6 @@ describe('match-event', function () {
       this.use(matchEvent());
     }
     Base.extend(MyApp);
-    Emitter(MyApp.prototype);
     var app = new MyApp();
 
     var count = 0;
@@ -203,7 +202,6 @@ describe('match-event', function () {
       Base.call(this);
     }
     Base.extend(MyApp);
-    Emitter(MyApp.prototype);
     var app = new MyApp();
     app.use(matchEvent());
 
